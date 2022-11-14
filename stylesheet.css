@@ -1,0 +1,164 @@
+:root {
+	--clr-big: #0A0E29;
+	--clr-med: #D5CABB;
+	--clr-small: #F1F1F3;
+	--clr-one: #DBB13B;
+	--clr-two: #56BDA2;
+	--clr-three: #2494A2;
+	--clr-four: #304B78;
+	--clr-hover: #EAE4DB;
+}
+
+body {
+	margin: 0;
+}
+
+
+.mtext a:link{
+	text-decoration: underline;
+	color: var(--clr-med);
+}
+
+.mtext a:hover{
+	color: var(--clr-hover);
+}
+
+.mtext a:visited{
+	color: var(--clr-small);
+} 
+
+.header {
+	background-color: var(--clr-small);
+	height: 210px;
+	width: 100%;
+	left: 0;
+	top: 0;
+	display: block;
+	color: var(--clr-big);
+	border-bottom: 10px solid;
+	animation: color-change 4s infinite;
+}
+
+.htitle{
+	padding: 5px 10px 0 50px;
+	font-size: 30px;
+	font-family: 'League Spartan';
+	font-weight: bold;
+	animation: 1.5s ease-out 0s 1 slideInFromLeft, fadeIn 3s;
+}
+
+.hsubtitle {
+	padding: 0 10px 5px 40px;
+	font-size: 20px;
+    font-family: 'League Spartan';
+	animation: 1.7s ease-out 0s 1 slideInFromLeft, fadeIn 4.5s;
+}
+
+#navbar a {
+	position: fixed;
+	left: -145px;
+	transition: 0.3s;
+	padding: 20px;
+	width: 175px;
+	text-decoration: none;
+	font-size: 25px;
+    font-family: 'League Spartan';
+	font-weight: bold;
+	border-radius: 0 5px 5px 0;
+}
+
+#navbar a:hover{
+	left: 0;
+}
+
+#about {
+	top: 225px;
+	background-color: var(--clr-one);
+	color: var(--clr-small);
+}
+
+#pixel {
+	top: 300px;
+	background-color: var(--clr-two);
+	color: var(--clr-small);
+}
+
+#concept {
+	top: 375px;
+	background-color: var(--clr-three);
+	color: var(--clr-small);
+}
+
+#projects {
+	top: 450px;
+	background-color: var(--clr-four);
+	color: var(--clr-small);
+}
+
+.main {
+	display: block;
+	width: 100%;
+	left:0;
+	top: 200px;
+	background-color: var(--clr-big);	
+	padding-top: 55px;
+}
+
+.mtitle{
+	padding-top: 10px;
+	padding-left: 190px;
+	font-size: 23px;
+    font-family: 'League Spartan';
+	font-weight: bold;
+	color: var(--clr-med);
+	text-decoration: underline;
+}
+
+.mtext{
+	padding: 0 10px 0 175px;
+	font-size: 20px;
+    font-family: 'League Spartan';
+	color: var(--clr-med);
+}
+
+.grid{
+	float: center;
+	display: grid;
+	gap: 10px;
+	padding-left: 100px;
+	padding-right: 50px;
+	padding-bottom:100px;
+	grid-template-columns: 50% 50%;
+}
+
+.gridv{
+	float: center;
+	display: grid;
+	gap: 10px;
+	padding-left: 200px;
+	padding-right: 100px;
+	padding-bottom: 100px;
+	grid-template-columns: 50% 50%;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes color-change {
+	0% { border-color: var(--clr-one); }
+	25% { border-color: var(--clr-two); }
+	50% { border-color: var(--clr-three); }
+	75% { border-color: var(--clr-four); }
+	100% { border-color: var(--clr-one);}
+}
